@@ -1,18 +1,15 @@
 'use client'
 
-import { useLottie } from 'lottie-react'
+import Lottie from 'lottie-react'
+
+import animationData from "./poppy-loading-data.json";
 
 export default function PoppyLoader() {
-  const options = {
-    loop: true,
-    autoplay: true,
-    animationData: '../../public/poppy-loading-data.json',
-  }
-  const { View } = useLottie(options)
 
   return (
     <div className="w-full h-screen flex items-center justify-center text-center">
-      <div className="lottie">{View}</div>
+      <h1>Loading...</h1>
+      <Lottie animationData={animationData} loop={true} />
     </div>
   )
 }
